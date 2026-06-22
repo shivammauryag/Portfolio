@@ -181,7 +181,7 @@ function Home() {
           <h3>Hello, I'm</h3>
 
           <h1>
-            <span className="highlight">Shivam Maurya</span>
+            <span className="highlight">Shivam Singh Maurya</span>
           </h1>
 
           <h2 className="role">Full Stack Developer</h2>
