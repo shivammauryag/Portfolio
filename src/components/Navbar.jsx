@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <style>{`
@@ -14,7 +18,7 @@ function Navbar() {
           justify-content:space-between;
           align-items:center;
           padding:18px 60px;
-          background:rgba(15,23,42,0.85);
+          background:rgba(15,23,42,0.9);
           backdrop-filter:blur(12px);
           color:white;
           position:sticky;
@@ -67,22 +71,41 @@ function Navbar() {
           color:#38bdf8;
         }
 
+        .menu-btn{
+          display:none;
+          font-size:28px;
+          cursor:pointer;
+          color:white;
+        }
+
         /* Tablet */
         @media(max-width:768px){
           .navbar{
-            flex-direction:column;
-            padding:18px 25px;
-            gap:18px;
-          }
-
-          .nav-links{
-            gap:20px;
-            flex-wrap:wrap;
-            justify-content:center;
+            padding:15px 25px;
           }
 
           .logo{
             font-size:26px;
+          }
+
+          .menu-btn{
+            display:block;
+          }
+
+          .nav-links{
+            position:absolute;
+            top:70px;
+            left:0;
+            width:100%;
+            background:#0f172a;
+            flex-direction:column;
+            gap:20px;
+            padding:20px 0;
+            display:none;
+          }
+
+          .nav-links.active{
+            display:flex;
           }
         }
 
@@ -96,11 +119,6 @@ function Navbar() {
             font-size:22px;
           }
 
-          .nav-links{
-            flex-direction:column;
-            gap:14px;
-          }
-
           .nav-links a{
             font-size:15px;
           }
@@ -108,13 +126,36 @@ function Navbar() {
       `}</style>
 
       <nav className="navbar">
-        <h2 className="logo">Portfolio</h2>
+        <h2 className="logo">Saumya Maurya</h2>
 
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <div
+          className="menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <li>
+            <a href="#home" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
     </>
