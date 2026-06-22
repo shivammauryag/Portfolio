@@ -196,8 +196,7 @@ function About() {
 
             <p>
               Hello! I'm a passionate Full Stack Developer who enjoys
-              building responsive and modern web applications using
-              React and JavaScript.
+              building responsive and modern web applications.
             </p>
 
             <p>
@@ -209,7 +208,7 @@ function About() {
 
               <div className="info-card">
                 <h4>Education</h4>
-                <p>B.Tech Student</p>
+                <p>BCA (AI/ML)</p>
               </div>
 
               <div className="info-card">
@@ -232,6 +231,7 @@ function About() {
             <div className="skills">
               <span>C++</span>
               <span>Java</span>
+              <span>Python</span>
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
