@@ -188,8 +188,7 @@ function Home() {
 
           <p>
             Passionate Full Stack Developer creating modern,
-            responsive and user-friendly web experiences using
-            React and JavaScript.
+            responsive and user-friendly web experiences.
           </p>
 
           <div className="btn-group">
