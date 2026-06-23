@@ -126,7 +126,7 @@ function Navbar() {
       `}</style>
 
       <nav className="navbar">
-        <h2 className="logo">Saumya Maurya</h2>
+        <h2 className="logo">Shivam Singh Maurya</h2>
 
         <div
           className="menu-btn"
