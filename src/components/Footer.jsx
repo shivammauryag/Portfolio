@@ -132,7 +132,7 @@ function Footer() {
       `}</style>
 
       <footer className="footer">
-        <h2 className="footer-logo">Saumya Maurya</h2>
+        <h2 className="footer-logo">Shivam Singh Maurya</h2>
 
         <p className="footer-text">
           MERN Stack Developer passionate about building responsive,
